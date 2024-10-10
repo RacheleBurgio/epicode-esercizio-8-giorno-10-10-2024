@@ -55,7 +55,7 @@ console.log(crazyDiff(20))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const boundary = function (n) {
-  if (n > 20 && n < 100) {
+  if (n > 20 && n <= 100) {
     return true
   } else if (n === 400) {
     return true
@@ -76,14 +76,14 @@ console.log(boundary(19))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const epify = function (miao) {
-  if (miao !== 'epicode') {
-    return 'epicode' + miao
-  } else {
+  if (miao.startsWith('Epicode')) {
     return miao
+  } else {
+    return 'Epicode' + miao
   }
 }
 
-console.log(epify('epicode'))
+console.log(epify('Epicode'))
 console.log(epify('miao'))
 
 /* ESERCIZIO 6
@@ -93,10 +93,10 @@ console.log(epify('miao'))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const check3and7 = function (numpPositivo) {
-  if (numpPositivo % 3 === 0 || numpPositivo % 7 === 0) {
-    return 'Il numero è positivo: Accettato!'
+  if (numpPositivo >= 0 && (numpPositivo % 3 === 0 || numpPositivo % 7 === 0)) {
+    return 'Il numero è multiplo: Accettato!'
   } else {
-    return 'il numero è negativo: Rifiutato!'
+    return 'il numero non è multiplo: Rifiutato!'
   }
 }
 
@@ -152,7 +152,7 @@ console.log(upperFirst2('mi chiamo rachele'))
 /* SCRIVI QUI LA TUA RISPOSTA */
 // const cutString = function () {}
 const cutString = function (lettere) {
-  return lettere.slice(1, 6)
+  return lettere.slice(1, 7)
 }
 
 console.log(cutString('Macarena'))
@@ -169,4 +169,4 @@ const giveMeRandom = function (n) {
   return array
 }
 
-console.log(giveMeRandom(2))
+console.log(giveMeRandom(7))
